@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>
+            <img src="SpadeLogo.png" style="float:left; width:60px; height:80px;"> Spade
+            <div style="float:right">
+                <span id="userName"></span>
+                <button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
+            </div>
+            <br> Contact Manager
+        </h1>
+    </div>
+
+
+    <h2>Contacts</h2>
+
+    <div id="accessUIDiv">
+        <input type="text" id="searchText" placeholder="Contact To Search For" />
+        <button type="button" id="searchContactButton" class="buttons" onclick="searchContact();"> Search Contact </button><br />
+        <span id="contactSearchResult"></span>
+        <p id="contactList"></p>
+
+
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Date Created</th>
+                <th>Make Changes</th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" id="firstName" placeholder="John">
+                    <input type="text" id="lastName" placeholder="Doe">
+                </th>
+                <th> <input type="text" id="emailAddress" placeholder="John.Doe@email.com"></th>
+                <th> <input type="text" id="phoneNumber" placeholder="(111) 222-3333"></th>
+                <th> mm/dd/yyyy </th>
+                <th>
+                    <button type="button" id="addContactButton" class="buttons" onclick="addContact();"> Add Contact </button><br />
+                    <span id="contactAddResult"></span><br />
+                </th>
+            </tr>
+            <tr>
+                <th>Shelbo Belbo</th>
+                <th>Feathers@email.com</th>
+                <th>(666) 666-6666</th>
+                <th>9/15/2020</th>
+                <th>
+                    <button type="button" id="editContactButton" class="buttons" onclick="editContact();"> Edit Contact </button>
+                    <span id="contactAddResult"></span><br />
+                    <button type="button" id="deleteContactButton" class="buttons" onclick="deleteContact();"> Delete Contact </button>
+                    <span id="contactDeleteResult"></span><br />
+                </th>
+            </tr>
+            <tr>
+                <th>Egg Eggerson</th>
+                <th>RoundMound@email.com</th>
+                <th>(000) 000-0000</th>
+                <th>9/15/2020</th>
+                <th>
+                    <button type="button" id="editContactButton" class="buttons" onclick="editContact();"> Edit Contact </button>
+                    <span id="contactAddResult"></span><br />
+                    <button type="button" id="deleteContactButton" class="buttons" onclick="deleteContact();"> Delete Contact </button>
+                    <span id="contactDeleteResult"></span><br />
+                </th>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
