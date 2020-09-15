@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <title>Contacts Homepage</title>
+
     <style>
         table {
             font-family: arial, sans-serif;
@@ -34,7 +36,6 @@
         </h1>
     </div>
 
-
     <h2>Contacts</h2>
 
     <div id="accessUIDiv">
@@ -43,7 +44,16 @@
         <span id="contactSearchResult"></span>
         <p id="contactList"></p>
 
-
+        <script>
+            function confirmDelete() {
+                var choice;
+                var answer = confirm("Are you sure you want to delete this contact?");
+                if (answer == true) {
+                    deleteContact();
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
 
         <table>
             <tr>
@@ -74,7 +84,7 @@
                 <th>
                     <button type="button" id="editContactButton" class="buttons" onclick="editContact();"> Edit Contact </button>
                     <span id="contactAddResult"></span><br />
-                    <button type="button" id="deleteContactButton" class="buttons" onclick="deleteContact();"> Delete Contact </button>
+                    <button type="button" id="deleteContactButton" class="buttons" onclick="confirmDelete();"> Delete Contact </button>
                     <span id="contactDeleteResult"></span><br />
                 </th>
             </tr>
@@ -86,7 +96,7 @@
                 <th>
                     <button type="button" id="editContactButton" class="buttons" onclick="editContact();"> Edit Contact </button>
                     <span id="contactAddResult"></span><br />
-                    <button type="button" id="deleteContactButton" class="buttons" onclick="deleteContact();"> Delete Contact </button>
+                    <button type="button" id="deleteContactButton" class="buttons" onclick="confirmDelete();"> Delete Contact </button>
                     <span id="contactDeleteResult"></span><br />
                 </th>
             </tr>
@@ -95,5 +105,10 @@
     </div>
 
 </body>
+<script>
+    $(document).ready(function() {
+        $('#myTable').dataTable();
+    });
+</script>
 
 </html>
