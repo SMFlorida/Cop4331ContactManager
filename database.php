@@ -3,10 +3,10 @@
 class Database{
  
     // specify your own database credentials
-    private $host = "http://spadecontactmanager.com";
+    private $host = "spadecontactmanager.com";
     private $db_name = "cop4311g_shelbydatabase";
     private $username = "cop4311g_shelbyuser";
-    private $password = "$hip$hape!";
+    private $password = "g7KJzejTVvG6SLC";
     public $conn;
  
     // get the database connection

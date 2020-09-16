@@ -1,6 +1,6 @@
 <?php
 // required headers
-header("Access-Control-Allow-Origin: http://spadecontactmanager.com/public_html/test/rest-api-authentication/");
+header("Access-Control-Allow-Origin: http://spadecontactmanager.com/test/rest-api-authentication/");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");

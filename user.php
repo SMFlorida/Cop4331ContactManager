@@ -8,7 +8,7 @@ class User{
  
     // object properties
     public $userID;
-    public $username
+    public $username;
     public $password;
  
     // constructor
@@ -22,7 +22,7 @@ function create(){
     // insert query
     $query = "INSERT INTO " . $this->table_name . "
             SET
-                username = :username
+                username = :username,
                 password = :password";
  
     // prepare the query
